@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Joke Book</title>
+		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="style.css">
+		<script src="jquery.min.js"></script>
+		<script src="script.js"></script>
+	</head>
+	<body>
+
+	<h1>Joke of the day</h1>
+	<p>Add a joke using the form. Hover over a joke to  see its punchline and author!</p>
+		<form id="addJoke">
+			<input type="text" id="whoseJoke" placeholder="Name" autocomplete="off" /><input type="text" id="jokeQuestion" placeholder="Joke" autocomplete="off" /><input type="text" id="punchLine" placeholder="Punch Line" autocomplete="off" /><input type="submit" />
+		</form>
+
+		<ul class="container-jokes">
+
+			<li class="joke flip-container">
+
+				<div class="flipper card">
+
+					<div class="joke-question front"></div>
+
+					<div class="back">
+
+						<div class="joke-punchline"></div>
+
+						<div class="joke-author"></div>
+
+					</div>
+
+				</div>
+
+			</li>
+
+			<li class="joke flip-container">
+
+				<div class="flipper card">
+
+					<div class="joke-question front"></div>
+
+					<div class="back">
+
+						<div class="joke-punchline"></div>
+
+						<div class="joke-author"></div>
+
+					</div>
+
+				</div>
+
+			</li>
+
+		</ul>
+
+
+	</body>
+</html>

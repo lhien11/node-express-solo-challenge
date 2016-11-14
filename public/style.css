@@ -1,0 +1,112 @@
+.container-jokes,
+.container-jokes ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+.container-jokes {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.container-jokes > .joke {
+	flex: 0 0 26%;
+	min-height: 200px;
+	font-size: 2em;
+	max-width: 400px;
+	margin: 1em 0;
+	background-color: #FAFAFA;
+}
+
+.front, .back {
+	word-wrap: break-word;
+	padding: .5em;
+	box-sizing: border-box;
+}
+
+.front {
+	background-color: #008AFF;
+	min-height: 200px;
+	width: 100%;
+}
+
+.back {
+	background-color: #156AB2;
+	min-height: 200px;
+	width: 100%;
+}
+
+.front:nth-of-type(2n) {
+	background-color: red;
+}
+
+.joke-author:before {
+	content:"- ";
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+		transition-delay: 0.5s;
+	}
+
+.flip-container, .front, .back {
+
+}
+
+h1,
+p {
+	text-align: center;
+	margin-bottom: 0;
+}
+
+#addJoke {
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#addJoke > input[type="text"] {
+	padding: .5em;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+	overflow: scroll;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
