@@ -1,16 +1,12 @@
-/* jshint esversion: 6 */
-(function() {
-    'use strict';
-})(); // Use strict JS
 
 // Load Express
-const express = require('express');
+var express = require('express');
 
 // Start express
-const app = express();
+var app = express();
 
 // Load BodyParser
-const bodyParser = require('body-parser');
+var bodyParser = require('body-parser');
 // Tell the app to let bodyParser get data that is sent to server
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
